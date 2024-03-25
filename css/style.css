@@ -85,6 +85,12 @@ body {
   color: hsl(245, 75%, 52%);
   font-weight: 700;
   font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.plan-box a:hover {
+  text-decoration: none;
+  color: hsl(245, 75%, 52%);
 }
 
 a.proceed-btn {
@@ -97,10 +103,59 @@ a.proceed-btn {
   border-radius: 12px;
   margin: 30px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-a.cancel-btn{
-    color: hsl(223deg 12.58% 55.32%);
-    text-decoration: none;
-    font-weight: 700;
+a.proceed-btn:hover {
+  background-color: hsl(244.8deg 49.1% 61.02%);
+  color: white;
+}
+
+a.cancel-btn {
+  color: hsl(223deg 12.58% 55.32%);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+a.cancel-btn:hover {
+  text-decoration: none;
+  color: hsl(223, 47%, 23%);
+}
+
+@media only screen and (max-width: 450px) {
+  body{
+    background-image: url(pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: hsl(225, 100%, 94%);
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 87%;
+  }
+
+  .title{
+    font-size: 23px;
+  }
+
+  div.plan-box {
+    padding: 12px;
+  }
+
+  .plan-box-left div {
+    margin-left: 10px;
+  }
+
+  a.proceed-btn,
+  a.cancel-btn,
+  .plan-box a
+   {
+    font-size: 13px;
+  }
+
+  .text-content{
+    padding: 9% 7%;
+  }
 }
